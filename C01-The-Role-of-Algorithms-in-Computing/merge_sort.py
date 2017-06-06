@@ -1,7 +1,3 @@
-'''\
-    1. if input [1] done
-    2. recursive sort nums[1:len/2] and nums[len/2+1:n]
-    3. merge 2 sorted lists'''
 from collections import deque
 
 def merge_sort(lst):
