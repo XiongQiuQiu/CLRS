@@ -10,7 +10,7 @@ def merge_sort(lst):
         return lst
 
     def merge(left, right):
-        merged,left,right = deque(),deque(left),deque(right)
+        merged,left,right = deque(), deque(left), deque(right)
         while left and right:
             merged.append(left.popleft() if left[0] >= right[0] else right.popleft())  # deque popleft is also O(1)
         merged.extend(right if right else left)
