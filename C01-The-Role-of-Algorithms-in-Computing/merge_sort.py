@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def merge_sort(lst):
     '''
     1. if input [1] done
@@ -10,7 +11,7 @@ def merge_sort(lst):
         return lst
 
     def merge(left, right):
-        merged,left,right = deque(), deque(left), deque(right)
+        merged, left, right = deque(), deque(left), deque(right)
         while left and right:
             merged.append(left.popleft() if left[0] >= right[0] else right.popleft())  # deque popleft is also O(1)
         merged.extend(right if right else left)
@@ -21,7 +22,8 @@ def merge_sort(lst):
     right = merge_sort(lst[middle:])
     return merge(left, right)
 
-print merge_sort([5,4,4,6,1,3])
+
+print merge_sort([5, 4, 4, 6, 1, 3])
 
 '''
 def MergeSort(lists):
