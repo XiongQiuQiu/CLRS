@@ -10,7 +10,7 @@ def max_heapify(nums, i):
     largest = r if r < heap_size and nums[r] > nums[largest] else largest
     if largest != i:
         nums[i], nums[largest] = nums[largest], nums[i]
-        max_heapify(nums, i)
+        max_heapify(nums, largest)
 
 
 def build_max_heap(nums):
